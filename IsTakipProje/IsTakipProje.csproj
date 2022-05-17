@@ -33,11 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1.UI, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.1.Wizard, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -195,7 +200,9 @@
     <Content Include="Pictures\icons8_company_100px_2.png" />
     <Content Include="Pictures\icons8_conference_100px.png" />
     <Content Include="Pictures\icons8_copy_to_clipboard_100px.png" />
+    <Content Include="Pictures\icons8_decline_64px.png" />
     <Content Include="Pictures\icons8_department_100px.png" />
+    <Content Include="Pictures\icons8_flow_chart_40px.png" />
     <Content Include="Pictures\icons8_futures_100px.png" />
     <Content Include="Pictures\icons8_graph_100px.png" />
     <Content Include="Pictures\icons8_graph_report_100px.png" />
@@ -207,6 +214,7 @@
     <Content Include="Pictures\icons8_organization_100px.png" />
     <Content Include="Pictures\icons8_plus_100px.png" />
     <Content Include="Pictures\icons8_plus_96px.png" />
+    <Content Include="Pictures\icons8_profit_chart_3d_64px.png" />
     <Content Include="Pictures\icons8_task_100px_1.png" />
     <Content Include="Pictures\icons8_todo_list_100px_1.png" />
   </ItemGroup>

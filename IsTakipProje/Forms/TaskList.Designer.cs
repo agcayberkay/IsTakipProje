@@ -30,9 +30,9 @@ namespace IsTakipProje.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskList));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            DevExpress.XtraCharts.Legend legend1 = new DevExpress.XtraCharts.Legend();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.grdTaskList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pnlSol = new DevExpress.XtraEditors.PanelControl();
@@ -49,8 +49,8 @@ namespace IsTakipProje.Forms
             this.lblAktif = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pnlSagAlt = new DevExpress.XtraEditors.PanelControl();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlOrtaUst = new DevExpress.XtraEditors.PanelControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.grdTaskList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSol)).BeginInit();
@@ -66,9 +66,11 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSagAlt)).BeginInit();
             this.pnlSagAlt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlOrtaUst)).BeginInit();
             this.pnlOrtaUst.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // grdTaskList
@@ -147,7 +149,7 @@ namespace IsTakipProje.Forms
             // 
             // pnl2
             // 
-            this.pnl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(142)))), ((int)(((byte)(38)))));
+            this.pnl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(104)))), ((int)(((byte)(121)))));
             this.pnl2.Appearance.Options.UseBackColor = true;
             this.pnl2.Controls.Add(this.pictureBox3);
             this.pnl2.Controls.Add(this.lblInaktif);
@@ -196,7 +198,7 @@ namespace IsTakipProje.Forms
             // 
             // pnl3
             // 
-            this.pnl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(152)))), ((int)(((byte)(58)))));
+            this.pnl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
             this.pnl3.Appearance.Options.UseBackColor = true;
             this.pnl3.Controls.Add(this.pictureBox2);
             this.pnl3.Controls.Add(this.lblAktif);
@@ -245,30 +247,12 @@ namespace IsTakipProje.Forms
             // 
             // pnlSagAlt
             // 
-            this.pnlSagAlt.Controls.Add(this.chart1);
+            this.pnlSagAlt.Controls.Add(this.chartControl1);
             this.pnlSagAlt.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlSagAlt.Location = new System.Drawing.Point(417, 157);
             this.pnlSagAlt.Name = "pnlSagAlt";
             this.pnlSagAlt.Size = new System.Drawing.Size(585, 296);
             this.pnlSagAlt.TabIndex = 3;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(2, 2);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Departments";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(581, 292);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // pnlOrtaUst
             // 
@@ -281,6 +265,24 @@ namespace IsTakipProje.Forms
             this.pnlOrtaUst.Size = new System.Drawing.Size(585, 151);
             this.pnlOrtaUst.TabIndex = 4;
             this.pnlOrtaUst.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOrtaUst_Paint);
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            legend1.Name = "Legend 1";
+            legend1.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            this.chartControl1.Legends.AddRange(new DevExpress.XtraCharts.Legend[] {
+            legend1});
+            this.chartControl1.Location = new System.Drawing.Point(2, 2);
+            this.chartControl1.Name = "chartControl1";
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Departments";
+            series1.View = pieSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(581, 292);
+            this.chartControl1.TabIndex = 0;
             // 
             // TaskList
             // 
@@ -312,9 +314,11 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSagAlt)).EndInit();
             this.pnlSagAlt.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlOrtaUst)).EndInit();
             this.pnlOrtaUst.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,7 +333,6 @@ namespace IsTakipProje.Forms
         private DevExpress.XtraEditors.PanelControl pnl3;
         private DevExpress.XtraEditors.PanelControl pnlSagAlt;
         private DevExpress.XtraEditors.PanelControl pnlOrtaUst;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.LabelControl lblToplamD;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -339,5 +342,6 @@ namespace IsTakipProje.Forms
         private System.Windows.Forms.PictureBox pictureBox2;
         private DevExpress.XtraEditors.LabelControl lblAktif;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }

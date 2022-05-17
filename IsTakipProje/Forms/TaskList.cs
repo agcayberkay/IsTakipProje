@@ -39,19 +39,7 @@ namespace IsTakipProje.Forms
             grdTaskList.DataSource = istenilenDegerler;
             //
 
-            // Grafik verilerini oluşturma
-
-            chart1.Series["Departments"].Points.AddXY("İnsan Kaynakları", 15);
-            chart1.Series["Departments"].Points.AddXY("Yazılım", 60);
-            chart1.Series["Departments"].Points.AddXY("Muhasebe Departmanı", 4);
-            chart1.Series["Departments"].Points.AddXY("Bilgi İşlem", 23);
-            chart1.Series["Departments"].Points.AddXY("Yönetim", 4);
-            chart1.Series["Departments"].Points.AddXY("Kütüphane", 13);
-            chart1.Series["Departments"].Points.AddXY("Donanım", 19);
-            chart1.Series["Departments"].Points.AddXY("Mutfak", 15);
-            chart1.Series["Departments"].Points.AddXY("Bahçe İşleri", 30);
-
-            //
+       
 
             // Panel verileni çeken kod bloğu
 
@@ -59,6 +47,14 @@ namespace IsTakipProje.Forms
             lblAktif.Text = db.Tasks.Where(x => x.Situation == true).Count().ToString();
             lblInaktif.Text = db.Tasks.Where(x => x.Situation == false).Count().ToString();
             lblToplamD.Text = db.Departments.Count().ToString();
+            //
+
+
+            // Grafik verilerini oluşturma
+
+            chartControl1.Series["Departments"].Points.AddPoint("Aktif Görevler", int.Parse(lblAktif.Text));
+            chartControl1.Series["Departments"].Points.AddPoint("İnaktif Görevler", int.Parse(lblInaktif.Text));
+            
 
 
             //
