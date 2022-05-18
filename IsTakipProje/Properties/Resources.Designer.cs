@@ -83,6 +83,16 @@ namespace IsTakipProje.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_account_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_account_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_user_group_man_man_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_add_user_group_man_man_100px", resourceCulture);
@@ -93,9 +103,39 @@ namespace IsTakipProje.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrator_male_skin_type_7_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_administrator_male_skin_type_7_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_business_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_business_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_calendar_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_calendar_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_clock_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_clock_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +166,16 @@ namespace IsTakipProje.Properties {
         internal static System.Drawing.Bitmap icons8_copy_to_clipboard_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_copy_to_clipboard_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_create_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_create_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +283,16 @@ namespace IsTakipProje.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_more_details_100px1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_more_details_100px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_organization_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_organization_100px", resourceCulture);
@@ -263,6 +323,26 @@ namespace IsTakipProje.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_refresh_80px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_refresh_80px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_report_card_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_report_card_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_task_100px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_task_100px_1", resourceCulture);
@@ -273,9 +353,29 @@ namespace IsTakipProje.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_task_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_task_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_todo_list_100px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_todo_list_100px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_unit_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_unit_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -48,5 +48,24 @@ namespace IsTakipProje
             taskL.MdiParent = this;
             taskL.Show();
         }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            NewTask ntask = new NewTask();
+            ntask.Show();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddPersonel adp = new AddPersonel();
+            adp.Show();
+        }
+
+        private void barButtonItem17_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            TaskDetails tskd = new TaskDetails();
+            tskd.MdiParent = this;
+            tskd.Show();
+        }
     }
 }

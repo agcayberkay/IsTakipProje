@@ -26,7 +26,7 @@ namespace IsTakipProje.Forms
 
         IsTakipEntities db = new IsTakipEntities();
 
-        private void TaskList_Load(object sender, EventArgs e)
+        public void ShowTaskList()
         {
             // Listeye verileri çekme
             var istenilenDegerler = (from x in db.Tasks
@@ -35,10 +35,15 @@ namespace IsTakipProje.Forms
                                          x.ID,
                                          x.Descriptions,
                                          x.Situation
-                                     }).ToList() ;
+                                     }).ToList();
             grdTaskList.DataSource = istenilenDegerler;
             //
+        }
 
+        private void TaskList_Load(object sender, EventArgs e)
+        {
+
+            ShowTaskList();
        
 
             // Panel verileni çeken kod bloğu
@@ -60,9 +65,6 @@ namespace IsTakipProje.Forms
             //
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

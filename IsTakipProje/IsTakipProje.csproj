@@ -39,6 +39,7 @@
     <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v21.1.UI, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -55,9 +56,13 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -109,11 +114,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddPersonel.Designer.cs">
+      <DependentUpon>AddPersonel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewTask.Designer.cs">
+      <DependentUpon>NewTask.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Personels.cs">
       <SubType>Form</SubType>
@@ -127,6 +144,12 @@
     <Compile Include="Forms\PersonelsGraphic .Designer.cs">
       <DependentUpon>PersonelsGraphic .cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TaskDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskDetails.Designer.cs">
+      <DependentUpon>TaskDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TaskList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,14 +161,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddPersonel.resx">
+      <DependentUpon>AddPersonel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewTask.resx">
+      <DependentUpon>NewTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Personels.resx">
       <DependentUpon>Personels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelsGraphic .resx">
       <DependentUpon>PersonelsGraphic .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaskDetails.resx">
+      <DependentUpon>TaskDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TaskList.resx">
       <DependentUpon>TaskList.cs</DependentUpon>
@@ -195,11 +227,16 @@
     </Content>
     <Content Include="Pictures\icons8_about_100px.png" />
     <Content Include="Pictures\icons8_account_100px.png" />
+    <Content Include="Pictures\icons8_account_48px.png" />
     <Content Include="Pictures\icons8_add_user_group_man_man_100px.png" />
+    <Content Include="Pictures\icons8_administrator_male_skin_type_7_48px.png" />
     <Content Include="Pictures\icons8_business_100px.png" />
+    <Content Include="Pictures\icons8_calendar_48px.png" />
+    <Content Include="Pictures\icons8_clock_100px.png" />
     <Content Include="Pictures\icons8_company_100px_2.png" />
     <Content Include="Pictures\icons8_conference_100px.png" />
     <Content Include="Pictures\icons8_copy_to_clipboard_100px.png" />
+    <Content Include="Pictures\icons8_create_48px.png" />
     <Content Include="Pictures\icons8_decline_64px.png" />
     <Content Include="Pictures\icons8_department_100px.png" />
     <Content Include="Pictures\icons8_flow_chart_40px.png" />
@@ -215,8 +252,12 @@
     <Content Include="Pictures\icons8_plus_100px.png" />
     <Content Include="Pictures\icons8_plus_96px.png" />
     <Content Include="Pictures\icons8_profit_chart_3d_64px.png" />
+    <Content Include="Pictures\icons8_refresh_80px.png" />
+    <Content Include="Pictures\icons8_report_card_48px.png" />
     <Content Include="Pictures\icons8_task_100px_1.png" />
+    <Content Include="Pictures\icons8_task_48px.png" />
     <Content Include="Pictures\icons8_todo_list_100px_1.png" />
+    <Content Include="Pictures\icons8_unit_100px.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

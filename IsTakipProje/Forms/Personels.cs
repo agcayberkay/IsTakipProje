@@ -50,32 +50,7 @@ namespace IsTakipProje.Forms
         }
         //
 
-        // Personel ekleme işlemi
-        public void AddPersonel()
-        {
-            P1.Id = int.Parse(txtPID.Text);
-            var arananDeger = db.Personels.Find(P1.Id);
-            if (arananDeger==null)
-            {
-                P1.Name = txtPName.Text;
-                P1.Surname = txtPSurname.Text;
-                P1.Mail = txtPMail.Text;
-                P1.Phone = txtPPhone.Text;
-                P1.Gorsel = txtPGorsel.Text;
-                P1.Department = int.Parse(lookUpEdit1.EditValue.ToString());
-                P1.Durum = true;
-                db.Personels.Add(P1);
-                db.SaveChanges();
-                XtraMessageBox.Show("Personel başarılı bir şekilde eklendi.", "Add", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ShowPersonels();
-            }
-            else
-            {
-                XtraMessageBox.Show("Eklemeye çalıştığınıd ID'de farklı bir kayıt bulunmaktadır. Lütfen kontrol edip tekrar deneyiniz.","ADD ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
-
-            }
-            
-        }
+       
         //
 
         // Personel silme/kaldırma işlemi
@@ -144,10 +119,6 @@ namespace IsTakipProje.Forms
 
         }
 
-        private void btnPAdd_Click(object sender, EventArgs e)
-        {
-            AddPersonel();
-        }
 
         private void btnPDelete_Click(object sender, EventArgs e)
         {
@@ -168,6 +139,11 @@ namespace IsTakipProje.Forms
             txtPPhone.Text = gridView1.GetFocusedRowCellValue("Phone").ToString();
             txtPGorsel.Text = gridView1.GetFocusedRowCellValue("Gorsel").ToString();
             lookUpEdit1.Text = gridView1.GetFocusedRowCellValue("Department").ToString();
+        }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

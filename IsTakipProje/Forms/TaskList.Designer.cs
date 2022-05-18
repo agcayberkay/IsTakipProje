@@ -49,8 +49,8 @@ namespace IsTakipProje.Forms
             this.lblAktif = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pnlSagAlt = new DevExpress.XtraEditors.PanelControl();
-            this.pnlOrtaUst = new DevExpress.XtraEditors.PanelControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.pnlOrtaUst = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grdTaskList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSol)).BeginInit();
@@ -66,11 +66,11 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSagAlt)).BeginInit();
             this.pnlSagAlt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlOrtaUst)).BeginInit();
-            this.pnlOrtaUst.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlOrtaUst)).BeginInit();
+            this.pnlOrtaUst.SuspendLayout();
             this.SuspendLayout();
             // 
             // grdTaskList
@@ -88,6 +88,7 @@ namespace IsTakipProje.Forms
             // 
             this.gridView1.GridControl = this.grdTaskList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // pnlSol
             // 
@@ -129,7 +130,7 @@ namespace IsTakipProje.Forms
             this.lblToplamD.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblToplamD.Appearance.Options.UseFont = true;
             this.lblToplamD.Appearance.Options.UseForeColor = true;
-            this.lblToplamD.Location = new System.Drawing.Point(71, 94);
+            this.lblToplamD.Location = new System.Drawing.Point(70, 94);
             this.lblToplamD.Name = "lblToplamD";
             this.lblToplamD.Size = new System.Drawing.Size(15, 33);
             this.lblToplamD.TabIndex = 0;
@@ -178,7 +179,7 @@ namespace IsTakipProje.Forms
             this.lblInaktif.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblInaktif.Appearance.Options.UseFont = true;
             this.lblInaktif.Appearance.Options.UseForeColor = true;
-            this.lblInaktif.Location = new System.Drawing.Point(74, 94);
+            this.lblInaktif.Location = new System.Drawing.Point(78, 94);
             this.lblInaktif.Name = "lblInaktif";
             this.lblInaktif.Size = new System.Drawing.Size(15, 33);
             this.lblInaktif.TabIndex = 0;
@@ -227,7 +228,7 @@ namespace IsTakipProje.Forms
             this.lblAktif.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblAktif.Appearance.Options.UseFont = true;
             this.lblAktif.Appearance.Options.UseForeColor = true;
-            this.lblAktif.Location = new System.Drawing.Point(77, 94);
+            this.lblAktif.Location = new System.Drawing.Point(78, 94);
             this.lblAktif.Name = "lblAktif";
             this.lblAktif.Size = new System.Drawing.Size(15, 33);
             this.lblAktif.TabIndex = 0;
@@ -254,18 +255,6 @@ namespace IsTakipProje.Forms
             this.pnlSagAlt.Size = new System.Drawing.Size(585, 296);
             this.pnlSagAlt.TabIndex = 3;
             // 
-            // pnlOrtaUst
-            // 
-            this.pnlOrtaUst.Controls.Add(this.pnl3);
-            this.pnlOrtaUst.Controls.Add(this.pnl1);
-            this.pnlOrtaUst.Controls.Add(this.pnl2);
-            this.pnlOrtaUst.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlOrtaUst.Location = new System.Drawing.Point(417, 0);
-            this.pnlOrtaUst.Name = "pnlOrtaUst";
-            this.pnlOrtaUst.Size = new System.Drawing.Size(585, 151);
-            this.pnlOrtaUst.TabIndex = 4;
-            this.pnlOrtaUst.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOrtaUst_Paint);
-            // 
             // chartControl1
             // 
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -283,6 +272,18 @@ namespace IsTakipProje.Forms
         series1};
             this.chartControl1.Size = new System.Drawing.Size(581, 292);
             this.chartControl1.TabIndex = 0;
+            // 
+            // pnlOrtaUst
+            // 
+            this.pnlOrtaUst.Controls.Add(this.pnl3);
+            this.pnlOrtaUst.Controls.Add(this.pnl1);
+            this.pnlOrtaUst.Controls.Add(this.pnl2);
+            this.pnlOrtaUst.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOrtaUst.Location = new System.Drawing.Point(417, 0);
+            this.pnlOrtaUst.Name = "pnlOrtaUst";
+            this.pnlOrtaUst.Size = new System.Drawing.Size(585, 151);
+            this.pnlOrtaUst.TabIndex = 4;
+            this.pnlOrtaUst.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOrtaUst_Paint);
             // 
             // TaskList
             // 
@@ -314,11 +315,11 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSagAlt)).EndInit();
             this.pnlSagAlt.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pnlOrtaUst)).EndInit();
-            this.pnlOrtaUst.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlOrtaUst)).EndInit();
+            this.pnlOrtaUst.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

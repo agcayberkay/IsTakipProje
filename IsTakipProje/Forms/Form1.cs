@@ -132,5 +132,10 @@ namespace IsTakipProje.Forms
         {
             UpdateList();
         }
+
+        private void Departmentt_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
