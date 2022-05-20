@@ -19,53 +19,105 @@ namespace IsTakipProje
         }
 
 
-        
-
+        HomePageForm home;
+        Departmentt departmentt;
+        PersonelsList pr;
+        PersonelsGraphic pg;
+        TaskList taskL;
+        NewTask ntask;
+        AddPersonel adp;
+        TaskDetails tskd;
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Departmentt departmentt = new Departmentt();
-            departmentt.MdiParent = this;
-            departmentt.Show();
+
+            if (departmentt == null || departmentt.IsDisposed)
+            {
+                departmentt = new Departmentt();
+                departmentt.MdiParent = this;
+                departmentt.Show();
+            }
         }
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            PersonelsList pr = new PersonelsList();
-            pr.MdiParent = this;
-            pr.Show();
+            // Açılan sayfanın bir daha açılmaması için gerekli kod bloğu
+            if (pr == null || pr.IsDisposed)
+            {
+                pr = new PersonelsList();
+                pr.MdiParent = this;
+                pr.Show();
+            }
+
         }
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            PersonelsGraphic pg = new PersonelsGraphic();
-            pg.MdiParent = this;
-            pg.Show();
+            if (pg == null || pg.IsDisposed)
+            {
+                pg = new PersonelsGraphic();
+                pg.MdiParent = this;
+                pg.Show();
+            }
+
         }
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TaskList taskL = new TaskList();
-            taskL.MdiParent = this;
-            taskL.Show();
+            if (taskL == null || taskL.IsDisposed)
+            {
+                taskL = new TaskList();
+                taskL.MdiParent = this;
+                taskL.Show();
+            }
+
         }
 
         private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            NewTask ntask = new NewTask();
-            ntask.Show();
+            if (ntask == null || ntask.IsDisposed)
+            {
+                ntask = new NewTask();
+                ntask.Show();
+            }
+
         }
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AddPersonel adp = new AddPersonel();
-            adp.Show();
+            if (adp == null || adp.IsDisposed)
+            {
+                adp = new AddPersonel();
+                adp.Show();
+            }
+
         }
 
         private void barButtonItem17_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TaskDetails tskd = new TaskDetails();
-            tskd.MdiParent = this;
-            tskd.Show();
+            if (tskd == null || tskd.IsDisposed)
+            {
+                tskd = new TaskDetails();
+                tskd.MdiParent = this;
+                tskd.Show();
+            }
+
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (home == null || home.IsDisposed)
+            {
+                home = new HomePageForm();
+                home.MdiParent = this;
+                home.Show();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            home = new HomePageForm();
+            home.MdiParent = this;
+            home.Show();
         }
     }
 }
