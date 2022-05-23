@@ -18,7 +18,7 @@ namespace IsTakipProje.Forms
             InitializeComponent();
         }
 
-        IsTakipEntities db = new IsTakipEntities();
+        IsTakipEntities1 db = new IsTakipEntities1();
         private void PersonelsGraphic_Load(object sender, EventArgs e)
         {
             lblToplamDepartman.Text = db.Departments.Count().ToString();

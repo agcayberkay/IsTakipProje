@@ -19,7 +19,7 @@ namespace IsTakipProje.Forms
             gridView1.OptionsBehavior.Editable = false;
         }
 
-        IsTakipEntities db = new IsTakipEntities();
+        IsTakipEntities1 db = new IsTakipEntities1();
 
         private void ActiveTaskList()
         {
@@ -30,12 +30,54 @@ namespace IsTakipProje.Forms
                                        Personel = x.Personels1.Name+" "+x.Personels1.Surname,
                                        x.Situation
                                    }).Where(y=> y.Situation==true).ToList();
+            
             grdDevamEdenGorevler.DataSource = istenilenDegler;
+            gridView1.Columns["Situation"].Visible = false;
+        }
+
+
+        private void TaskDateToday()
+        {
+            DateTime todays = DateTime.Parse(DateTime.Today.ToShortDateString());
+            var istenilenDegerler = (from x in db.MissionDetails
+                                     select new 
+                                     { 
+                                     
+                                     Gorev= x.Tasks.Descriptions,
+                                     x.Descriptions,
+                                     x.Dates
+                                     }
+                                   ).Where(x => x.Dates== todays).ToList();
+            grdTodaysTasks.DataSource = istenilenDegerler;
+
+        }
+
+
+        private void InCall()
+        {
+            var istenilenDegerler = (from x in db.InCall
+                                     select new { 
+                                        x.Company.Name,
+                                        x.Subjects,
+                                        x.Durum,
+                                        x.Dates    
+                                     }).Where(y=> y.Durum==true).ToList();
+            grdInCall.DataSource = istenilenDegerler;
+            gridView3.Columns["Durum"].Visible = false;
+
+
         }
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
             ActiveTaskList();
+            TaskDateToday();
+            InCall();
+        }
+
+        private void grdInCall_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

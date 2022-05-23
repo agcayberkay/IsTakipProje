@@ -14,6 +14,12 @@ namespace IsTakipProje.Entity
     
     public partial class Company
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Company()
+        {
+            this.InCall = new HashSet<InCall>();
+        }
+    
         public int ID { get; set; }
         public string Name { get; set; }
         public string Competent { get; set; }
@@ -23,5 +29,8 @@ namespace IsTakipProje.Entity
         public string Province { get; set; }
         public string Distirct { get; set; }
         public string Address { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InCall> InCall { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace IsTakipProje.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class IsTakipEntities : DbContext
+    public partial class IsTakipEntities1 : DbContext
     {
-        public IsTakipEntities()
-            : base("name=IsTakipEntities")
+        public IsTakipEntities1()
+            : base("name=IsTakipEntities1")
         {
         }
     
@@ -30,6 +30,8 @@ namespace IsTakipProje.Entity
         public virtual DbSet<Departments> Departments { get; set; }
         public virtual DbSet<MissionDetails> MissionDetails { get; set; }
         public virtual DbSet<Personels> Personels { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tasks> Tasks { get; set; }
+        public virtual DbSet<InCall> InCall { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace IsTakipProje.Forms
 
         }
 
-        IsTakipEntities db = new IsTakipEntities();
+        IsTakipEntities1 db = new IsTakipEntities1();
 
         public void ShowTaskList()
         {

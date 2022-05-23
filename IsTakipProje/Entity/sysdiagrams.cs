@@ -12,14 +12,12 @@ namespace IsTakipProje.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class MissionDetails
+    public partial class sysdiagrams
     {
-        public int ID { get; set; }
-        public int Task { get; set; }
-        public string Descriptions { get; set; }
-        public Nullable<System.DateTime> Dates { get; set; }
-        public string Clock { get; set; }
-    
-        public virtual Tasks Tasks { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

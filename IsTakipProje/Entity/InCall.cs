@@ -12,14 +12,15 @@ namespace IsTakipProje.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class MissionDetails
+    public partial class InCall
     {
         public int ID { get; set; }
-        public int Task { get; set; }
+        public Nullable<int> CallCompany { get; set; }
+        public string Subjects { get; set; }
         public string Descriptions { get; set; }
         public Nullable<System.DateTime> Dates { get; set; }
-        public string Clock { get; set; }
+        public Nullable<bool> Durum { get; set; }
     
-        public virtual Tasks Tasks { get; set; }
+        public virtual Company Company { get; set; }
     }
 }
