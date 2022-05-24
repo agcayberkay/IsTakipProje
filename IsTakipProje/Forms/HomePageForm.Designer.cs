@@ -29,6 +29,8 @@ namespace IsTakipProje.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.grdDevamEdenGorevler = new DevExpress.XtraGrid.GridControl();
@@ -39,9 +41,14 @@ namespace IsTakipProje.Forms
             this.grdTodaysTasks = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.grdInCall = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.Company = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.grdCompany = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -49,6 +56,7 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.grdDevamEdenGorevler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -57,10 +65,19 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdInCall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdInCall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Company)).BeginInit();
+            this.Company.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -101,6 +118,8 @@ namespace IsTakipProje.Forms
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.groupControl5);
+            this.panelControl3.Controls.Add(this.Company);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl3.Location = new System.Drawing.Point(675, 0);
             this.panelControl3.Name = "panelControl3";
@@ -152,6 +171,16 @@ namespace IsTakipProje.Forms
             this.panelControl4.Size = new System.Drawing.Size(347, 201);
             this.panelControl4.TabIndex = 4;
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.grdInCall);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl3.Location = new System.Drawing.Point(2, 2);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(343, 197);
+            this.groupControl3.TabIndex = 0;
+            this.groupControl3.Text = "In Call";
+            // 
             // grdInCall
             // 
             this.grdInCall.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,15 +199,55 @@ namespace IsTakipProje.Forms
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
-            // groupControl3
+            // Company
             // 
-            this.groupControl3.Controls.Add(this.grdInCall);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(2, 2);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(343, 197);
-            this.groupControl3.TabIndex = 0;
-            this.groupControl3.Text = "In Call";
+            this.Company.Controls.Add(this.grdCompany);
+            this.Company.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Company.Location = new System.Drawing.Point(2, 2);
+            this.Company.Name = "Company";
+            this.Company.Size = new System.Drawing.Size(323, 248);
+            this.Company.TabIndex = 0;
+            this.Company.Text = "Company";
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.Controls.Add(this.chartControl1);
+            this.groupControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl5.Location = new System.Drawing.Point(2, 252);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(323, 199);
+            this.groupControl5.TabIndex = 1;
+            this.groupControl5.Text = "In Call Graphic";
+            // 
+            // grdCompany
+            // 
+            this.grdCompany.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdCompany.Location = new System.Drawing.Point(2, 23);
+            this.grdCompany.MainView = this.gridView4;
+            this.grdCompany.Name = "grdCompany";
+            this.grdCompany.Size = new System.Drawing.Size(319, 223);
+            this.grdCompany.TabIndex = 0;
+            this.grdCompany.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.grdCompany;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsView.ShowGroupPanel = false;
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Legend.Name = "In Call Graphic";
+            this.chartControl1.Location = new System.Drawing.Point(2, 23);
+            this.chartControl1.Name = "chartControl1";
+            series1.Name = "In Call Graphic";
+            series1.View = pieSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(319, 174);
+            this.chartControl1.TabIndex = 0;
             // 
             // HomePageForm
             // 
@@ -200,6 +269,7 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.grdDevamEdenGorevler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -208,10 +278,19 @@ namespace IsTakipProje.Forms
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdInCall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdInCall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Company)).EndInit();
+            this.Company.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,5 +310,10 @@ namespace IsTakipProje.Forms
         private DevExpress.XtraGrid.GridControl grdInCall;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.GroupControl Company;
+        private DevExpress.XtraGrid.GridControl grdCompany;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }
