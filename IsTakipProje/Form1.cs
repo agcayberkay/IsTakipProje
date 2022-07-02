@@ -27,6 +27,8 @@ namespace IsTakipProje
         NewTask ntask;
         AddPersonel adp;
         TaskDetails tskd;
+        frmActiveCalls frmAcalls;
+        frmInactıveCalls frmInactıveCalls;
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -118,6 +120,26 @@ namespace IsTakipProje
             home = new HomePageForm();
             home.MdiParent = this;
             home.Show();
+        }
+
+        private void barButtonItem25_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmAcalls == null || frmAcalls.IsDisposed)
+            {
+                frmAcalls = new frmActiveCalls();
+                frmAcalls.MdiParent = this;
+                frmAcalls.Show();
+            }
+        }
+
+        private void barButtonItem26_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frmInactıveCalls == null || frmInactıveCalls.IsDisposed)
+            {
+                frmInactıveCalls = new frmInactıveCalls();
+                frmInactıveCalls.MdiParent = this;
+                frmInactıveCalls.Show();
+            }
         }
     }
 }

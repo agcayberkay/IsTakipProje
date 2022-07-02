@@ -132,6 +132,18 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmActiveCalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActiveCalls.Designer.cs">
+      <DependentUpon>frmActiveCalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInactıveCalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInactıveCalls.Designer.cs">
+      <DependentUpon>frmInactıveCalls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActiveCalls.resx">
+      <DependentUpon>frmActiveCalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInactıveCalls.resx">
+      <DependentUpon>frmInactıveCalls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
@@ -247,6 +265,8 @@
     <Content Include="Pictures\icons8_administrator_male_skin_type_7_48px.png" />
     <Content Include="Pictures\icons8_business_100px.png" />
     <Content Include="Pictures\icons8_calendar_48px.png" />
+    <Content Include="Pictures\icons8_call_120px.png" />
+    <Content Include="Pictures\icons8_call_60px.png" />
     <Content Include="Pictures\icons8_clock_100px.png" />
     <Content Include="Pictures\icons8_company_100px_2.png" />
     <Content Include="Pictures\icons8_conference_100px.png" />
@@ -254,6 +274,8 @@
     <Content Include="Pictures\icons8_create_48px.png" />
     <Content Include="Pictures\icons8_decline_64px.png" />
     <Content Include="Pictures\icons8_department_100px.png" />
+    <Content Include="Pictures\icons8_end_call_120px.png" />
+    <Content Include="Pictures\icons8_end_call_60px.png" />
     <Content Include="Pictures\icons8_flow_chart_40px.png" />
     <Content Include="Pictures\icons8_futures_100px.png" />
     <Content Include="Pictures\icons8_graph_100px.png" />
